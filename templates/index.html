@@ -1,0 +1,97 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="contenedor" >
+    <img src="{{ url_for('static', filename='imag/ecua.jpg') }}" width="700" height="200"/>
+    <div class="texto-encima" style="text-align: left;color: white;">
+         <h5>Datos históricos de sismos en el Ecuador, 1985-2019</h5>
+        <p>Fecha, Hora, Profundidad y Ubicación de todos los simos con Magnitud mayor a 4</p>
+            <br><br><br>
+         <a style="color:mintcream;" href="https://earthquake.usgs.gov/earthquakes/map/#%7B%22feed%22%3A%221574788176102%22%2C%22sort%22%3A%22newest%22%2C%22basemap%22%3A%22terrain%22%2C%22restrictListToMap%22%3A%5B%22restrictListToMap%22%5D%2C%22timezone%22%3A%22utc%22%2C%22mapposition%22%3A%5B%5B-85%2C0%5D%2C%5B85%2C360%5D%5D%2C%22overlays%22%3A%5B%22plates%22%5D%2C%22viewModes%22%3A%5B%22list%22%2C%22map%22%5D%2C%22listFormat%22%3A%22default%22%2C%22autoUpdate%22%3Afalse%2C%22search%22%3A%7B%22id%22%3A%221574788176102%22%2C%22name%22%3A%22Search%20Results%22%2C%22isSearch%22%3Atrue%2C%22params%22%3A%7B%22starttime%22%3A%221987-01-01T15%3A18%3A03.350Z%22%2C%22endtime%22%3A%222019-10-02T15%3A18%3A03.350Z%22%2C%22latitude%22%3A-1.8675%2C%22longitude%22%3A-77.8884%2C%22maxradiuskm%22%3A250%2C%22minmagnitude%22%3A4.5%2C%22orderby%22%3A%22time%22%7D%7D%7D"><h4>Datos Disponibles en USGS</h4> </a> 
+    </div>
+</div> <br> <br><br>
+<h5 style="background:dodgerblue; color: white;"><b>DATOS HISTÓRICOS DE SISMOS OCURRIDOS EN EL ECUADOR</b></h5>
+<br>
+<div class="row">
+   <!-- <div class="col-md-1">
+        {% with mensajes = get_flashed_messages()  %}
+            {%   if mensajes  %}
+                {%for mensaje in mensajes %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ mensaje }} 
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                {%  endfor %}
+            {%endif %}
+        {% endwith %}
+        <div class="card card-body">
+            <form action="agregarsismo" method="POST">
+                <div class="form-group">
+                    <input type="text" name="magnitud" placeholder="Magnitud" class="form-control">
+                    <input type="date" name="fecha" placeholder="Fecha" class="form-control">
+                    <input type="text" name="hora" placeholder="Hora 24h:mm" class="form-control">
+                    <input type="text" name="latitud" placeholder="Latitud" class="form-control">
+                    <input type="text" name="longitud" placeholder="Longitud" class="form-control">
+                    <input type="text" name="profundidad" placeholder="Profundidad" class="form-control">
+                    <input type="text" name="epicentro" placeholder="Epicentro" class="form-control">
+                    <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>-->
+    <div class="col-md-12">
+            <table class="table table-striped table-bordered bg-white table-sm">
+                <thead>
+                    <tr>
+                        <!--<td>Id Sismo</td>-->
+                        <td><b>Magnitud</b></td>
+                        <td><b>Fecha</b></td>
+                        <td><b>Hora</b></td>
+                        <td><b>Latitud</b></td>
+                        <td><b>Longitud</b></td>
+                        <td><b>Profundidad</b></td>
+                        <td><b>Epicentro</b></td>
+                        <!--<td>Eliminar</td>
+                        <td>Editar</td>-->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                            <!--<td></td>-->
+                            <td> <img onmouseover="this.width=500;this.height=400;" onmouseout="this.width=130;this.height=75;" src="{{ url_for('static', filename='imag/magnitud.JPG') }}" width="130" height="75" class="d-inline-block align-top" alt=""></td>
+                            <td> <img onmouseover="this.width=500;this.height=400;" onmouseout="this.width=130;this.height=75;" src="{{ url_for('static', filename='imag/fecha.JPG') }}" width="130" height="75" class="d-inline-block align-top" alt=""></td>
+                            <td> <img onmouseover="this.width=500;this.height=400;" onmouseout="this.width=130;this.height=75;" src="{{ url_for('static', filename='imag/Hora.JPG') }}" width="130" height="75" class="d-inline-block align-top" alt=""></td>
+                            <td> <img onmouseover="this.width=500;this.height=400;" onmouseout="this.width=130;this.height=75;" src="{{ url_for('static', filename='imag/latitud.JPG') }}" width="130" height="75" class="d-inline-block align-top" alt=""></td>
+                            <td> <img onmouseover="this.width=500;this.height=400;" onmouseout="this.width=130;this.height=75;" src="{{ url_for('static', filename='imag/longitud.JPG') }}" width="130" height="75" class="d-inline-block align-top" alt=""></td>
+                            <td> <img onmouseover="this.width=500;this.height=400;" onmouseout="this.width=130;this.height=75;" src="{{ url_for('static', filename='imag/profundidad.JPG') }}" width="130" height="75" class="d-inline-block align-top" alt=""></td>
+                            <td> <img onmouseover="this.width=500;this.height=400;" onmouseout="this.width=130;this.height=75;" src="{{ url_for('static', filename='imag/epicentro.JPG') }}" width="130" height="75" class="d-inline-block align-top" alt=""></td>
+                            <!--<td></td>-->
+                        </tr>
+                </tbody>
+            </table>
+            <div style="height:400px; overflow-y: scroll;">
+                <table class="table table-striped table-bordered bg-white table-sm">
+                    <tbody>
+                        {% for sismo in sismos%}
+                            <tr>
+                                <!--<td>{{ sismo.0 }}</td>-->
+                                <td style="width:155px">{{ sismo.1 }}</td>
+                                <td style="width:161px">{{ sismo.2 }}</td>
+                                <td style="width:155px">{{ sismo.3 }}</td>
+                                <td style="width:159px">-{{ sismo.4 }}</td>
+                                <td style="width:159px">-{{ sismo.5 }}</td>
+                                <td style="width:159px">{{ sismo.6 }}</td>
+                                <td>{{ sismo.7 }}</td>
+                                <!--<td><a href="/eliminarsismo/{{sismo.0}}" class="btn btn-danger">Eliminar</a></td>
+                                <td><a href="/obtenersismo/{{sismo.0}}" class="btn btn-secondary">Editar</a></td>-->
+                            </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</div>
+
+
+{% endblock %}

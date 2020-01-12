@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br> <br> 
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="col-md-12 mt-md-0 mt-3">
+            <h3 style="background:dodgerblue; color: white;"><b>REDES NEURONALES</b></h3>
+            <br>
+            <div class="contenedor" >
+                <div class="card border-dark mb-3" style="max-width: 45rem;">
+                        <div class="card-header"></div>
+                        <div class="card-body text-dark" style="height:180px; overflow-y: scroll;">
+                          <h5 class="card-title">Resumen</h5>
+                          <p class="card-text" style="text-align:justify;">
+                                Los datos para aplicar el algoritmo de redes neuronales fueron recopilados a partir 
+                                de 1985 hasta el 2019. La mayoria de estos datos se obtuvieron de la página
+                                <a style="color:blue;" href="https://earthquake.usgs.gov/earthquakes/map/#%7B%22feed%22%3A%221574788176102%22%2C%22sort%22%3A%22newest%22%2C%22basemap%22%3A%22terrain%22%2C%22restrictListToMap%22%3A%5B%22restrictListToMap%22%5D%2C%22timezone%22%3A%22utc%22%2C%22mapposition%22%3A%5B%5B-85%2C0%5D%2C%5B85%2C360%5D%5D%2C%22overlays%22%3A%5B%22plates%22%5D%2C%22viewModes%22%3A%5B%22list%22%2C%22map%22%5D%2C%22listFormat%22%3A%22default%22%2C%22autoUpdate%22%3Afalse%2C%22search%22%3A%7B%22id%22%3A%221574788176102%22%2C%22name%22%3A%22Search%20Results%22%2C%22isSearch%22%3Atrue%2C%22params%22%3A%7B%22starttime%22%3A%221987-01-01T15%3A18%3A03.350Z%22%2C%22endtime%22%3A%222019-10-02T15%3A18%3A03.350Z%22%2C%22latitude%22%3A-1.8675%2C%22longitude%22%3A-77.8884%2C%22maxradiuskm%22%3A250%2C%22minmagnitude%22%3A4.5%2C%22orderby%22%3A%22time%22%7D%7D%7D">USGS</a>.
+                                Una vez recolectados los datos se procedió a realizar el respectivo análisis y procesamiento.
+                                Al entrenar el algoritmo de redes neuronales se obtuvo una perdida del 17% aproximadamente. Una vez entrenado 
+                                el modelo se procedió a realizar la respectiva predicción la cual se detalla en la parte inferior
+                                de esta página. Si desea ver los datos usados para la prediccion haga clic <a style="color:blue;" href="/verdatosredes">aqui</a>.
+                            </p>
+                        </div>
+                      </div>
+            </div> <br> <br>
+            <div class="contenedor" >
+                <div class="card border-dark mb-3" style="max-width: 55rem;">
+                    <div class="card-header" style="background:lightblue; color: darkblue; font-size: 18px;">
+                        <strong>Validación del modelo</strong></div>
+                    <div class="card-body text-dark" >
+                        <img src="{{ url_for('static', filename='imag/validacionred.png') }}" width="750" height="350"/>
+                        <h5 class="card-title">Explicación</h5>
+                        <p class="card-text" style="text-align:justify;">
+                            El gráfico nos muestra como estan distribuidos los datos reales y como estan los datos
+                            que se predijeron. Los puntos de color verde son la distribucion de los datos reales, 
+                            mientras que los puntos de color rojo son la distribucion de los datos predichos. 
+                            Como se puede observar la mayoria de los puntos son coicidentes o están muy cerca de serlos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br><br>  
+            <div class="contenedor" >
+                <div class="card border-dark mb-3" style="max-width: 55rem;">
+                    <div class="card-header" style="background:lightblue; color: darkblue; font-size: 18px;">
+                        <strong>Comparación del modelo</strong></div>
+                    <div class="card-body text-dark" >
+                        <img src="{{ url_for('static', filename='imag/comparacionred.png') }}" width="700" height="350"/>
+                        <h5 class="card-title">Explicación</h5>
+                        <p class="card-text" style="text-align:justify;">
+                            La gráfica que se observa muestra como se comportan los datos reales versus como se comportan
+                            los datos predichos. La linea de color azul indica la distribución de los datos reales,  
+                            mientras que la linea de color naranja muestra la distribucion de los datos predichos. 
+                            Se puede observar que hay ciertos picos a los que no llega las predicciones y esto se debe 
+                            a que hay muestras casi nulas de esos datos por lo que es difícil para la red neuronal
+                            LSTM realizar correctamente predicciones en esos picos.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}

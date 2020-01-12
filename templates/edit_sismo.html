@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+ <div class="col-md-4 offset-md-4">
+     <div class="card card-body">
+        <form action="editarsismo/{{sismo.0}}" method="POST">
+            <div class="form-group">
+                <input type="text" name="magnitud" placeholder="Magnitud" value={{sismo.1}} class="form-control">
+                <input type="date" name="fecha" placeholder="Fecha" value={{sismo.2}} class="form-control">
+                <input type="text" name="hora" placeholder="Hora 24h:mm"  value={{sismo.3}} class="form-control">
+                <input type="text" name="latitud" placeholder="Latitud" value={{sismo.4}} class="form-control">
+                <input type="text" name="longitud" placeholder="Longitud" value={{sismo.5}} class="form-control">
+                <input type="text" name="profundidad" placeholder="Profundidad" value={{sismo.6}} class="form-control">
+                <input type="text" name="epicentro" placeholder="Epicentro" value="{{sismo.7}}" class="form-control">
+                <button type="submit" class="btn btn-primary btn-block">Actualizar</button>
+            </div>
+        </form>
+     </div>
+ </div>
+
+    {% endblock %}

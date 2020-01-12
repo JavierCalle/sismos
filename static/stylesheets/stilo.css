@@ -1,0 +1,26 @@
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+ 
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cambiacolor:hover {
+    color: lime !important;
+    font-size: 21px;
+  }
+#cambiacolor:active {
+    color: red !important;
+    font-size: 21px;
+  }

@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br> <br> 
+
+<div class="row">
+    <div class="col-md-12">
+      
+        <div class="col-md-12 mt-md-0 mt-3">
+            <h5 class="text-uppercase font-weight-bold">REGRESIÓN LOGÍSTICA</h5>
+            <br>
+            <div class="contenedor" >
+                <div class="card border-dark mb-3" style="max-width: 45rem;">
+                        <div class="card-header"></div>
+                        <div class="card-body text-dark" style="height:180px; overflow-y: scroll;">
+                          <h5 class="card-title">Resumen</h5>
+                          <p class="card-text" style="text-align:justify;">
+                                Los datos para aplicar el algoritmo de regresión logística fueron recopilados a partir 
+                                de 1985 hasta el 2019. La mayoria de estos datos se obtuvieron de la página
+                                <a style="color:blue;" href="https://earthquake.usgs.gov/earthquakes/map/#%7B%22feed%22%3A%221574788176102%22%2C%22sort%22%3A%22newest%22%2C%22basemap%22%3A%22terrain%22%2C%22restrictListToMap%22%3A%5B%22restrictListToMap%22%5D%2C%22timezone%22%3A%22utc%22%2C%22mapposition%22%3A%5B%5B-85%2C0%5D%2C%5B85%2C360%5D%5D%2C%22overlays%22%3A%5B%22plates%22%5D%2C%22viewModes%22%3A%5B%22list%22%2C%22map%22%5D%2C%22listFormat%22%3A%22default%22%2C%22autoUpdate%22%3Afalse%2C%22search%22%3A%7B%22id%22%3A%221574788176102%22%2C%22name%22%3A%22Search%20Results%22%2C%22isSearch%22%3Atrue%2C%22params%22%3A%7B%22starttime%22%3A%221987-01-01T15%3A18%3A03.350Z%22%2C%22endtime%22%3A%222019-10-02T15%3A18%3A03.350Z%22%2C%22latitude%22%3A-1.8675%2C%22longitude%22%3A-77.8884%2C%22maxradiuskm%22%3A250%2C%22minmagnitude%22%3A4.5%2C%22orderby%22%3A%22time%22%7D%7D%7D">USGS</a>.
+                                Una vez recolectados los datos se procedió a realizar el respectivo análisis y procesamiento.
+                                Al entrenar el algoritmo de regresión logística se obtuvo una presición del 70%. Una vez entrenado 
+                                el modelo se procedió a realizar la respectiva predicción la cual se detalla en la parte inferior
+                                de esta página. Si desea ver los datos usados para la prediccion haga clic <a style="color:blue;" href="/verdatosregresion">aqui</a>.
+                            </p>
+                        </div>
+                      </div>
+            </div> <br> <br>
+
+            <div class="contenedor" >
+                <div class="card border-dark mb-3" style="max-width: 45rem;">
+                        <div class="card-header">Descripción</div>
+                        <div class="card-body text-dark" style="height:180px; overflow-y: scroll;">
+                          <h5 class="card-title">Contexto</h5>
+                          <p class="card-text" style="text-align:justify;">
+                                La Tierra es un planeta activo, y prueba de ello son los huracanes, tsunamis, sismos, entre otros, este último es un fenómeno vibrátil que se puede transmitir
+                                 a través de un movimiento ondulatorio, liberando energía debido al desplazamiento de las placas tectónicas, erupción volcánica, por ruptura de la corteza terrestre 
+                                 o por otras causas. Estos constantes movimientos se los suelen llamar temblores y este término es usado para calificar los sismos de regular intensidad, y en 
+                                 cuanto a su equivalencia, “tienen una magnitud menor a 6, y no causan grandes daños, y la palabra terremoto para los sismos de gran intensidad, y de mayor magnitud,
+                                  que conllevan efectos destructivos de construcciones realizadas por el hombre y/o pérdidas de vidas humanas”. A pesar de ello, frecuentemente se denomina terremoto 
+                                  para calificar cualquier sismo ya que significa movimiento de tierra. Una de las características más destacables de un terremoto es su naturaleza impredecible, 
+                                  es decir, estos se pueden dar en cualquier momento o lugar, y esto afecta mucho a la población humana ya que si dado el caso de que el terremoto sea de gran magnitud, 
+                                  las pérdidas serían mayores sin una buena preparación, en este aspecto
+                            </p>
+                        </div>
+                      </div>
+            </div> <br> <br>
+
+            <h5 class="card-title">Validación del modelo</h5>
+            <img src="{{ url_for('static', filename='imag/validacionreg.png') }}" width="600" height="350"/><br><br>  
+            <h5 class="card-title">Predicción del modelo</h5>
+            <img src="{{ url_for('static', filename='imag/distribucionreg.png') }}" width="600" height="350"/><br><br>
+            <h5 class="card-title">Comparación del modelo</h5>
+            <img src="{{ url_for('static', filename='imag/comparacionreg.png') }}" width="600" height="350"/><br><br>
+            <h5 class="card-title">Curva ROC</h5>
+            <img src="{{ url_for('static', filename='imag/curva_roc.png') }}" width="600" height="350"/>    
+        </div>
+        <br> <br>
+        <div class="col-md-12 mt-md-0 mt-3">
+            <h5 class="text-uppercase font-weight-bold">REDES NEURONALES</h5>
+            <br>
+            <div class="contenedor" >
+                <div class="card border-dark mb-3" style="max-width: 45rem;">
+                        <div class="card-header"></div>
+                        <div class="card-body text-dark" style="height:180px; overflow-y: scroll;">
+                          <h5 class="card-title">Resumen</h5>
+                          <p class="card-text" style="text-align:justify;">
+                                Los datos para aplicar el algoritmo de redes neuronales fueron recopilados a partir 
+                                de 1976 hasta el 2019. La mayoria de estos datos se obtuvieron de la página
+                                <a style="color:blue;" href="https://earthquake.usgs.gov/earthquakes/map/#%7B%22feed%22%3A%221574788176102%22%2C%22sort%22%3A%22newest%22%2C%22basemap%22%3A%22terrain%22%2C%22restrictListToMap%22%3A%5B%22restrictListToMap%22%5D%2C%22timezone%22%3A%22utc%22%2C%22mapposition%22%3A%5B%5B-85%2C0%5D%2C%5B85%2C360%5D%5D%2C%22overlays%22%3A%5B%22plates%22%5D%2C%22viewModes%22%3A%5B%22list%22%2C%22map%22%5D%2C%22listFormat%22%3A%22default%22%2C%22autoUpdate%22%3Afalse%2C%22search%22%3A%7B%22id%22%3A%221574788176102%22%2C%22name%22%3A%22Search%20Results%22%2C%22isSearch%22%3Atrue%2C%22params%22%3A%7B%22starttime%22%3A%221987-01-01T15%3A18%3A03.350Z%22%2C%22endtime%22%3A%222019-10-02T15%3A18%3A03.350Z%22%2C%22latitude%22%3A-1.8675%2C%22longitude%22%3A-77.8884%2C%22maxradiuskm%22%3A250%2C%22minmagnitude%22%3A4.5%2C%22orderby%22%3A%22time%22%7D%7D%7D">USGS</a>.
+                                Una vez recolectados los datos se procedió a realizar el respectivo análisis y procesamiento.
+                                Al entrenar el algoritmo de redes neuronales se obtuvo una perdida del 17% aproximadamente. Una vez entrenado 
+                                el modelo se procedió a realizar la respectiva predicción la cual se detalla en la parte inferior
+                                de esta página. Si desea ver los datos usados para la prediccion haga clic <a style="color:blue;" href="/verdatosredes">aqui</a>.
+                            </p>
+                        </div>
+                      </div>
+            </div> <br> <br>
+            <h5 class="card-title">Validación del modelo</h5>
+            <img src="{{ url_for('static', filename='imag/validacionred.png') }}" width="750" height="350"/><br><br>  
+            <h5 class="card-title">Comparación del modelo</h5>
+            <img src="{{ url_for('static', filename='imag/comparacionred.png') }}" width="700" height="350"/>  
+        </div>
+        
+    </div>
+ </div>
+
+{% endblock %}

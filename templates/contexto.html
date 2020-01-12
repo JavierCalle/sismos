@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br>  
+
+<div class="row" >
+    <div class="col-md-12">
+
+        <h3 style="background:dodgerblue; color: white;"><b>ANTECEDENTES</b></h3>
+        <p  style="text-align:justify;">
+            En los últimos años el Ecuador ha sido víctima de muchas actividades sísmicas, 
+            cuales se han ido incrementado conforma pasan los años, este fenómeno natural 
+            suele causar muchos daños puesto que provoca no solo que las personas pierdan 
+            sus seres queridos sino también muchas de las veces también deja a las personas
+            en la calle sin ninguna esperanza de vida, los más preocupante de todo es que 
+            estos cataclismos llegan en el momento menos esperado sin dar tiempo a las personas
+            de salvar cosas importantes para ellos y esto incluye salvar su propia vida, 
+            algunos países más desarrollados como Estados Unidos han desarrollado mecanismos
+            como alarmas sísmicas que alertan a sus ciudadanos la posible ocurrencia de un 
+            movimiento telúrico, sin embargo esta alarma suena solo unos instantes antes de
+            que ocurra este fenómeno natural sin dar tiempo a las personas de ponerse a salva 
+            en un lugar seguro.</p>
+            <img onmouseover="this.width=402;this.height=400;" onmouseout="this.width=202;this.height=200;"  src="{{ url_for('static', filename='imag/ecuador.png') }}" width="202" height="200"/> 
+            <br/><br/>
+        
+        <h3 style="background:dodgerblue; color: white;"><b>OBJETIVOS</b></h3>
+        <h5 style="text-align:justify;"><b>OBJETIVO GENERAL</b></h5>
+        <p  style="text-align:justify;">
+            Pronosticar la probabilidad de ocurrencia de un sismo mediante el uso de Machine 
+            Learning y ciertas técnicas probabilísticas para reducir los impactos negativos 
+            tanto sociales como estructurales que deja este tipo de fenómeno natural dentro 
+            del Ecuador.</p>
+        <h5 style="text-align:justify;"><b>OBJETIVOS ESPECÍFICOS</b></h5>
+        <ul style="text-align:justify;">
+            <li>Recopilar datos históricos acerca de los sismos ocurridos en el territorio 
+                ecuatoriano en un periodo de tiempo.</li>
+            <li>Hacer uso de las técnicas de Machine Learning para determinar la probabilidad 
+                de ocurrencia de un terremoto.</li>
+            <li>Determinar la exactitud de una prueba diagnóstica basada en redes neuronales 
+                y regresión logística para encontrar el punto de corte de una escala continua 
+                en el que se alcanza la sensibilidad y especificidad más alta.</li>
+            <li>Analizar los atributos de los datos históricos sobre los terremotos en el Ecuador 
+                que contengan las características necesarias para ser tomados en consideración en 
+                la aplicación de las técnicas de Machine Learning.</li>
+            <li>Desarrollar una página web para visualizar mediante gráficas estadísticas la 
+                probabilidad de ocurrencias de estos eventos sísmicos y así permanecer en un 
+                estado de alerta continua.</li>
+        </ul><br/> 
+
+        <h3 style="background:dodgerblue; color: white;"><b>METODOLOGÍA DE LA INVESTIGACIÓN</b></h3>
+        <p style="text-align:justify;">
+            <strong>La Metodología Deductiva </strong> consiste en estudiar casos particulares para 
+            obtener conocimientos generales permitiendo formar hipótesis investigativas de leyes 
+            científicas, por tal motivo esta metodología es ideal para usarse en nuestro proyecto 
+            ya que además de lo mencionado posee otras ventajas que pueden ser aprovechadas como son: 
+            fácil de comprender, sencillo de usar y sobre todo gracias a su flexibilidad permite enlazar 
+            todos los aspectos de los procesos partiendo de datos unitarios para llegar a tener una idea 
+            general o una visión global y clara de cómo vamos a realizar la conexión de todos estos datos.</p>
+            <img onmouseover="this.width=500;this.height=300;" onmouseout="this.width=250;this.height=100;"  src="{{ url_for('static', filename='imag/metododec.jpg') }}" width="250" height="100"/> 
+    </div>
+</div>
+
+{% endblock %}

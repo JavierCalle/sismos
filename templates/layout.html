@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SISMOS ECUADOR</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/stilo.css') }}" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+      <nav class="navbar navbar-dark bg-primary">
+              <a class="navbar-brand" href="/verprediccion">
+                <img src="{{ url_for('static', filename='imag/logoecua.jpg') }}" width="150" height="75" class="d-inline-block align-top" alt="">
+              </a> 
+              <p style="color: white"> Sismos en Ecuador &nbsp;<br> &nbsp;&nbsp;&nbsp;1985 - 2019 </p> 
+              <img src="{{ url_for('static', filename='imag/linea.png') }}" width="375" height="75" class="d-inline-block align-top" alt="">
+              
+              <a id="cambiacolor"  class="navbar-brand" href="/" style="a">
+                &nbsp; Página Principal
+              </a>
+
+              <a id="cambiacolor" class="navbar-brand" href="/vercontexto">
+                Contexto
+              </a> 
+
+              <a id="cambiacolor"  class="navbar-brand" href="/verregresionlogistica">
+                Regresión Logística
+              </a> 
+
+              <a id="cambiacolor"  class="navbar-brand" href="/verredesneuronales">
+                Redes Neuronales
+              </a> 
+      </nav>
+<div style="height:556px; overflow-y: scroll;">  
+    <div class="container pt-4" style="text-align: center">
+        
+            {% block body %}   
+                
+            {% endblock %} <br><br>
+    </div>
+    
+</body>
+<footer class="page-footer font-small teal pt-4">
+
+        <div class="container-fluid text-center text-md-left" style="background:azure; color: blak;">
+          <div class="row">
+            <div class="col-md-6 mt-md-0 mt-3">
+              <h5 class="text-uppercase font-weight-bold">Contactos: </h5>
+              <p><b>Dirección:&nbsp;&nbsp;&nbsp;</b> Cdla. Salvador Allende - Av.Delta y Av. Kennedy<br>
+                <b>Teléfonos:&nbsp;&nbsp;&nbsp;</b> (04) 2391004<br>  
+                </p>
+            </div>
+      
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <div class="col-md-6 mb-md-0 mb-3 text-right">
+ 
+              <h5 class="text-uppercase font-weight-bold">Siguenos en Nuestras Redes Sociales:</h5>
+              <a href="https://www.facebook.com/UdeGuayaquil/">Facebook:  &nbsp;&nbsp;<img src="{{ url_for('static', filename='imag/facebook.png') }}" width="20" height="25"  alt="Facebook"></a>
+              <a href="https://www.instagram.com/universidad_guayaquil/"> &nbsp;&nbsp;&nbsp;&nbsp;Instagram: &nbsp;&nbsp;<img src="{{ url_for('static', filename='imag/instagram.png') }}" width="20" height="25"   alt="Instagram"></a><br>
+	          <a href="https://twitter.com/udeguayaquil?lang=es">Twiter:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ url_for('static', filename='imag/gorjeo.png') }}" width="20" height="25"  alt="Twiter"></a>
+	          <a href="https://www.youtube.com/channel/UCNjcceqnaK8eqhQ8nE2U95w"> &nbsp;&nbsp;&nbsp;&nbsp; YouTube:  &nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ url_for('static', filename='imag/youtube.png') }}" width="20" height="25"  alt="Yotube"></a>
+      
+            </div>
+      
+          </div>
+      
+        </div>
+        <div class="footer-copyright text-center py-3" style="background: darkslategrey; color: white;">
+            <p>
+                © 2020 Copyright: Universidad de Guayaquil
+           </p>
+        </div>
+      
+      </footer>
+    </div>
+</html>
